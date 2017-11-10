@@ -1,24 +1,27 @@
+Django form generator
 
-- PostgreSQL used in this project as database. Form designs are stored 
+> PostgreSQL used in this project as database. Form designs are stored 
   in regular relational tables. Form data are stored in json format using
   postgres json type and django JsonField
 
-- test folder contains some test cases for form design.
-- screenshots folder contains output pictures in browser using JsonView extension
+> test folder contains some test cases for form design.
+> screenshots folder contains output pictures in browser using JsonView extension
 
-- Database "FormGenDB" should be created in PostgreSQL before migrate
+> Database "FormGenDB" should be created in PostgreSQL before migrate
 
 --------------------------------------------------------
 --------------------------------------------------------
 --------------------------------------------------------
 
 How to run:
+
 	- $: pip install -r requirements.txt
 	- $: python manage.py makemigrations
 	- $: python manage.py migrate
 	- $: python manage.py runserver 127.0.0.1:8000
 
 Run test (get, add, edit, delete form design):
+
 	- $: python test/form_design.py
 		
 
@@ -30,6 +33,7 @@ All urls and implementations are RESTful compatible.
 	- based on: https://en.wikipedia.org/wiki/Representational_state_transfer#Relationship_between_URL_and_HTTP_methods
 	
 API Doc:
+
 	/api/design/forms/
         GET:
             - input: format (define output format)
@@ -140,6 +144,7 @@ API Doc:
 		
 		
 Additional Info:
+
 	tested on:
 		- OS: Windows 10
 		- Interpreter: Python 3.5.2
@@ -151,6 +156,7 @@ Additional Info:
 --------------------------------------------------------
 
 Future works:
+
 	- Validate inputs
 	- Handle possible exceptions
 	- Add UI
